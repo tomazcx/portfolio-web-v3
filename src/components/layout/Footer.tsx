@@ -10,7 +10,24 @@ export function Footer({ dict }: { dict: Dictionary }) {
           <p className="text-sm text-fg-muted">
             {dict.footer.rights(new Date().getFullYear())}
           </p>
-          <p className="mt-1 font-mono text-xs text-fg-subtle">
+          <p className="mt-2 flex flex-wrap items-center gap-x-3 gap-y-1 text-sm">
+            <a
+              href={`mailto:${profile.email}`}
+              className="text-fg-muted transition-colors hover:text-accent"
+            >
+              {profile.email}
+            </a>
+            <span aria-hidden="true" className="text-fg-subtle">
+              ·
+            </span>
+            <a
+              href={`tel:${profile.phone}`}
+              className="text-fg-muted transition-colors hover:text-accent"
+            >
+              {profile.phoneDisplay}
+            </a>
+          </p>
+          <p className="mt-2 font-mono text-xs text-fg-subtle">
             {dict.footer.builtWith}
           </p>
         </div>
