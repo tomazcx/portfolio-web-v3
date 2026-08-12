@@ -1,0 +1,375 @@
+# ============================================================
+# MASTER PROFILE — Fonte da verdade para geração de CVs
+# Edite este arquivo com TODAS suas experiências, projetos e
+# habilidades. Quanto mais detalhado, melhor o output do agente.
+# O agente NUNCA edita este arquivo — apenas lê.
+# ============================================================
+
+personal:
+  name: "Tomaz Cantarelli Xavier" # TODO: nome completo
+  email: "tomazcx06@gmail.com"
+  phone: "+5549991613639" # TODO: telefone (com DDD e +55)
+  linkedin: "https://www.linkedin.com/in/tomazcx/" # TODO: linkedin.com/in/seu-perfil
+  github: "https://github.com/tomazcx" # TODO: github.com/seu-usuario
+  location: "Brasil"
+  nationality: "Brasileiro"
+
+# ============================================================
+# SUMÁRIOS — O agente escolhe/adapta o mais adequado por vaga
+# ============================================================
+summary_variants:
+  fullstack: |
+    With 3+ years of experience, I worked building entire systems, from headless 
+    e-commerce architectures to high-traffic NestJS microservices with cloud infrastructure.
+    Actively contributed to the architecture and development of Nestlé's third largest
+    e-commerce in the world, serving as the primary technical reference on projects
+    impacting 100,000+ users and driving strategic technical decisions.
+
+  frontend: |
+    With 3+ years of experience, I architected and developed modern, responsive interfaces
+    integrated with multiple external systems on a headless Next.js platform, the third
+    largest Nestlé e-commerce in the world. Served as the primary technical reference on
+    Nestlé ecosystem projects impacting 100,000+ users, driving strategic technical
+    decisions and improving cross-team alignment.
+
+  backend: |
+    With 3+ years of experience, I architected high-traffic microservices systems with NestJS
+    and cloud services, ensuring scalability and accurate revenue tracking. Actively
+    contributed to the architecture and development of Nestlé's third largest e-commerce
+    in the world, serving as the primary technical reference on projects impacting
+    100,000+ users and driving strategic technical decisions.
+
+  # Variantes em português
+  fullstack_pt: |
+    Com mais de 3 anos de experiência, arquitetei e desenvolvi desde frontends headless
+    até microsserviços de alto tráfego com NestJS e infraestrutura em nuvem. Participei
+    ativamente da arquitetura e desenvolvimento do terceiro maior e-commerce da Nestlé
+    no mundo, sendo referência técnica em projetos com impacto em mais de 100.000
+    usuários e conduzindo decisões técnicas estratégicas.
+
+  frontend_pt: |
+    Com mais de 3 anos de experiência, arquitetei e desenvolvi interfaces modernas e
+    responsivas integradas a diversos sistemas externos em plataforma headless com Next.js, 
+    o terceiro maior e-commerce da Nestlé no mundo. Fui referência técnica em projetos
+    no ecossistema Nestlé com impacto em mais de 100.000 usuários, conduzindo decisões
+    técnicas estratégicas e melhorando o alinhamento entre times.
+
+  backend_pt: |
+    Com mais de 3 anos de experiência, planejei a arquitetura de sistemas de microsserviços
+    de alto tráfego com NestJS e serviços de nuvem, garantindo escalabilidade e rastreamento
+    preciso de receita. Participei ativamente da arquitetura e desenvolvimento do terceiro
+    maior e-commerce da Nestlé no mundo, sendo referência técnica em projetos com impacto
+    em mais de 100.000 usuários e conduzindo decisões técnicas estratégicas.
+
+# ============================================================
+# EXPERIÊNCIAS PROFISSIONAIS
+# Campos por bullet:
+#   text: descrição da conquista/responsabilidade
+#   tags: tecnologias e domínios envolvidos (para matching com vagas)
+#   impact: resultado mensurável (quando disponível)
+#   always_show_first: se true, este bullet aparece SEMPRE como primeiro da experiência, independente da vaga
+# ============================================================
+experiences:
+  - company: "Nestlé"
+    role: "Analista Desenvolvedor Sênior"
+    location: "Remoto"
+    period_start: "2026-02" # TODO: confirmar mês de início
+    period_end: "present"
+    context: > # Não colocar na versão final
+      Time NH Labs. Desenvolvimento de plataforma de e-commerce B2C de suplementos
+      da marca Puravida, parte do Grupo Nestlé. Migração de plataforma Wake para
+      Adobe Commerce com frontend headless em Next.js.
+    bullets:
+      - text: "Led the architecture and development of Puravida's e-commerce migration to Adobe Commerce, with a headless Angular frontend, driving technical decisions throughout the full development cycle."
+        text_pt: "Conduzi a arquitetura e o desenvolvimento da migração do e-commerce da Puravida para Adobe Commerce, com frontend headless em Angular, liderando decisões técnicas ao longo de todo o ciclo de desenvolvimento."
+        always_show_first: true
+        tags:
+          [
+            frontend,
+            nextjs,
+            adobe-commerce,
+            architecture,
+            migration,
+            angular,
+            ecommerce,
+            headless,
+            isr,
+            caching,
+            redis,
+            go
+          ]
+
+      - text: "Led migrations of legacy systems and data structures to a modern, robust architecture, improving software quality, reducing technical debt, and delivering innovative solutions aligned with business requirements."
+        text_pt: "Conduzi migrações de sistemas legados e estruturas de dados para uma arquitetura moderna e robusta, elevando a qualidade do software, reduzindo débito técnico e entregando soluções inovadoras alinhadas às estratégias do negócio."
+        tags:
+          [
+            architecture,
+            migration,
+            legacy,
+            adobe-commerce,
+            nextjs,
+            ecommerce,
+            backend,
+            frontend,
+            typescript,
+          ]
+
+      - text: "Planned and architected complete e-commerce modules integrating with external systems from international Nestlé teams via REST APIs and OAuth2, reducing delivery timelines by up to 50% and accelerating roadmap execution, strengthening the team's reputation within the organization."
+        text_pt: "Planejei a arquitetura de módulos completos de e-commerce, promovendo integrações com sistemas externos de times internacionais da Nestlé via APIs REST e OAuth2, reduzindo prazos de entrega em até 50% e acelerando a execução do roadmap, o que fortaleceu a reputação do time dentro da empresa."
+        tags:
+          [
+            php,
+            adobe-commerce,
+            api,
+            rest-api,
+            oauth2,
+            architecture,
+            ecommerce,
+            integration,
+            technical-leadership,
+          ]
+
+      - text: "Led the development of a design system from scratch, delivering a reusable ReactJS component library that reduced feature development time by 60% across the project."
+        text_pt: "Liderei o desenvolvimento de um design system do zero, entregando uma biblioteca de componentes ReactJS reutilizáveis que reduziu o tempo de desenvolvimento de novas funcionalidades em 60% em todo o projeto."
+        tags:
+          [
+            frontend,
+            angular,
+            react,
+            design-system,
+            components,
+            developer-experience,
+            process-improvement,
+          ]
+
+      - text: "Designed and delivered high-availability RESTful backend services, increasing platform scalability and reliability for high-traffic e-commerce operations."
+        text_pt: "Projetei e entreguei serviços backend RESTful de alta disponibilidade, aumentando a escalabilidade e a confiabilidade da plataforma para operações de e-commerce de alto tráfego."
+        tags: [backend, api, integration, webhooks, adobe-commerce, ecommerce]
+
+      - text: "Reduced payment integration failures by implementing and debugging end-to-end payment flows with Adyen."
+        text_pt: "Reduzi falhas na integração de pagamentos implementando e depurando fluxos de pagamento end-to-end com Adyen."
+        tags:
+          [
+            backend,
+            payments,
+            adyen,
+            api,
+            integration,
+            webhooks,
+            adobe-commerce,
+            ecommerce,
+          ]
+
+  - company: "Nestlé - Terceirizado pela Consultoria Mathex"
+    role: "Fullstack Developer"
+    location: "Remoto"
+    period_start: "2024-03"
+    period_end: "2026-02"
+    context: >
+      Time NHS Labs. Desenvolvimento de plataforma de e-commerce B2C de suplementos
+      da marca Puravida, parte do Grupo Nestlé.
+    bullets:
+      - text: "Served as the primary technical reference on a large-scale e-commerce project directly impacting 100,000+ active users, leading architecture planning and technical decisions across multiple e-commerce platforms and CMS."
+        text_pt: "Atuei como principal referência técnica em um projeto de e-commerce de grande escala com impacto direto em mais de 100.000 usuários ativos, liderando o planejamento de arquitetura e decisões técnicas em múltiplas plataformas de e-commerce e CMS."
+        tags:
+          [
+            architecture,
+            technical-leadership,
+            ecommerce,
+            backend,
+            frontend,
+            fullstack,
+            adobe-commerce,
+            nextjs,
+            headless,
+            cms,
+            redis,
+            go,
+            java,
+            spring
+          ]
+      - text: "Led the migration of tens of thousands of records from a legacy database to a modernized MongoDB structure, ensuring data consistency, integrity, and zero operational downtime on a business-critical system."
+        text_pt: "Liderei a migração de dezenas de milhares de registros de um banco de dados legado para uma nova estrutura modernizada em MongoDB, garantindo consistência, integridade dos dados e zero impacto na continuidade operacional de um sistema crítico da empresa."
+        tags: [backend, database, mongodb, migration, data-integrity, redis, go]
+
+      - text: "Designed and built scalable ReactJS component libraries and reusable UI modules aligned with a shared internal design system, accelerating delivery consistency across eCommerce and retail CMS solutions."
+        text_pt: "Projetei e construí bibliotecas de componentes ReactJS escaláveis e módulos de UI reutilizáveis alinhados a um design system interno compartilhado, acelerando a consistência de entregas em soluções de e-commerce e CMS de varejo."
+        tags: [frontend, react, design-system, components, shopify, cms, react-native]
+
+      - text: "Improved cross-team alignment and delivery predictability by producing technical documentation, system diagrams, and solution prototypes, collaborating closely with Product, UX, and marketing stakeholders in an agile environment."
+        text_pt: "Melhorei o alinhamento entre times e a previsibilidade de entregas produzindo documentação técnica, diagramas de sistema e protótipos de solução, colaborando de perto com stakeholders de Produto, UX e marketing em ambiente ágil."
+        tags:
+          [
+            documentation,
+            cross-functional,
+            agile,
+            prototyping,
+            stakeholder-management,
+          ]
+      - text: "Continuously improved frontend performance, scalability, and maintainability across multiple concurrent projects, ensuring high-quality user experiences on high-traffic eCommerce platforms."
+        text_pt: "Aprimorei continuamente performance, escalabilidade e manutenibilidade do frontend em múltiplos projetos simultâneos, garantindo experiências de alta qualidade em plataformas de e-commerce de alto tráfego."
+        tags: [frontend, performance, scalability, nextjs, typescript, playwright, selenium]
+
+      - text: "Accelerated deliveries, reduced operational risks, and ensured scalability and performance by designing cloud infrastructure on Azure and AWS with CI/CD pipelines for microservices using Nest.js and event-driven messaging via RabbitMQ and Azure Event Hub."
+        text_pt: "Acelerei entregas, reduzi riscos operacionais e garanti escalabilidade e performance projetando infraestrutura cloud no Azure e AWS com pipelines de CI/CD para microsserviços com Nest.js e mensageria orientada a eventos via RabbitMQ e Azure Event Hub."
+        tags:
+          [
+            backend,
+            cloud,
+            azure,
+            aws,
+            socket.io,
+            websockets,
+            ci-cd,
+            microservices,
+            nestjs,
+            rabbitmq,
+            event-driven,
+            redis,
+            go,
+            java,
+            spring
+          ]
+
+  - company: "Bellosoft"
+    role: "Web Developer"
+    location: "Remoto"
+    period_start: "2023-06"
+    period_end: "2024-03"
+    context: >
+      Desenvolvimento de projetos web para clientes internacionais, incluindo dashboards,
+      ERPs, e-commerces e sites institucionais.
+    bullets:
+      - text: "Delivered 6+ projects for international clients across the full development lifecycle, from requirements analysis and design through development, QA, and maintenance, spanning dashboards, ERP systems, e-commerce platforms, and institutional websites."
+        always_show_first: true
+        text_pt: "Entreguei 6+ projetos para clientes internacionais ao longo de todo o ciclo de desenvolvimento, da análise de requisitos e design até o desenvolvimento, QA e manutenção, abrangendo dashboards, sistemas ERP, plataformas de e-commerce e sites institucionais."
+        tags:
+          [
+            fullstack,
+            project-delivery,
+            ecommerce,
+            erp,
+            dashboard,
+            requirements-analysis,
+            qa,
+          ]
+      - text: "Developed RESTful APIs integrated with big data solutions for visualization and analysis of international call center data, enabling greater operational visibility and data-driven decision-making."
+        text_pt: "Desenvolvi APIs RESTful integradas a soluções de big data para visualização e análise de dados de call centers internacionais, viabilizando maior visibilidade operacional e suporte à tomada de decisão baseada em dados."
+        tags:
+          [backend, api, rest, big-data, data-visualization, nodejs, typescript, chart.js, java, spring]
+      - text: "Reduced feature delivery time by 80% by standardizing and structuring the system architecture, establishing solid development foundations and increasing delivery predictability."
+        text_pt: "Reduzi em 80% o tempo de entrega de novas funcionalidades ao padronizar e estruturar a arquitetura do sistema, estabelecendo bases sólidas de desenvolvimento e aumentando a previsibilidade das entregas."
+        tags:
+          [architecture, process-improvement, developer-experience, standards]
+
+  - company: "Unifique Soluções Tecnológicas"
+    role: "Back-end Developer Intern"
+    location: "Videira, SC, Brazil"
+    period_start: "2021-07"
+    period_end: "2022-1"
+    context: >
+      Estágio com desenvolvimento de sistema interno de RH.
+    bullets:
+      - text: "Developed an internal HR system end-to-end, from requirements analysis and Figma prototyping through backend implementation, QA, and maintenance, optimizing employee management and performance evaluation for the HR department."
+        text_pt: "Desenvolvi um sistema interno de RH de ponta a ponta, da análise de requisitos e prototipação no Figma até a implementação backend, QA e manutenção, otimizando a gestão de colaboradores e avaliação de desempenho para o departamento de RH."
+        tags:
+          [
+            backend,
+            frontend,
+            fullstack,
+            php,
+            mariadb,
+            figma,
+            requirements-analysis,
+            hr-system,
+            java,
+            spring
+          ]
+      - text: "Ensured code quality and collaborative workflows by applying Git Flow for version control throughout the entire development cycle."
+        text_pt: "Garanti a qualidade do código e fluxos de trabalho colaborativos aplicando Git Flow para controle de versão ao longo de todo o ciclo de desenvolvimento."
+        tags: [git, git-flow, version-control, code-quality]
+
+# ============================================================
+# EDUCAÇÃO
+# ============================================================
+education:
+  - institution: "UFPR" # TODO: nome da instituição
+    degree: "Pós-Graduação em Inteligência Artificial Aplicada" # TODO: ex. "Bacharelado em Ciência da Computação"
+    degree_en: "Specialization in Applied Artificial Intelligence" # TODO: ex. "B.Sc. in Computer Science"
+    period_start: "2026-01" # TODO: YYYY-MM
+    period_end: "present" # TODO: YYYY-MM ou "present"
+  - institution: "UFPR" # TODO: nome da instituição
+    degree: "Tecnólogo em Análise e Desenvolvimento de Sistemas" # TODO: ex. "Bacharelado em Ciência da Computação"
+    degree_en: "Bachelor's Degree in Systems Analysis and Development" # TODO: ex. "B.Sc. in Computer Science"
+    period_start: "2023-02" # TODO: YYYY-MM
+    period_end: "2026-06" # TODO: YYYY-MM ou "present"
+  - institution: "IFC - Campus Videira" # TODO: nome da instituição
+    degree: "Técnico em Informática" # TODO: ex. "Bacharelado em Ciência da Computação"
+    degree_en: "Technical Degree in Computer Science" # TODO: ex. "B.Sc. in Computer Science"
+    period_start: "2020-02" # TODO: YYYY-MM
+    period_end: "2022-11" # TODO: YYYY-MM ou "present"
+
+# ============================================================
+# SKILLS COMPLETAS
+# O agente seleciona subset relevante por vaga.
+# Seja honesto sobre o nível: quanto mais granular, melhor.
+# ============================================================
+skills:
+  languages:
+    proficient: [TypeScript, JavaScript, SQL, Go, Java, PHP]
+    comfortable: []
+    familiar: [C#, Python]
+
+  scrapping:
+    proficient: [Playwright, Puppeteer]
+    comfortable: [Selenium, Stagehand]
+
+  frontend:
+    proficient: [React, Next.js, Vue.js, HTML, CSS, Tailwind CSS, SASS, Material UI, Redux, NextAuth, Azure AD, Chart.js]
+    comfortable: [Angular]
+    familiar: [Svelte, React Native]
+
+  backend:
+    proficient: [Node.js, NestJS, PHP, Express, Fastify, Laravel, Go, Socket.io, Websockets, Spring Boot, Spring Framework, Java]
+    comfortable: []
+    familiar: [.NET, Django] # TODO
+
+  databases:
+    comfortable: [PostgreSQL, MySQL, MongoDB, MariaDB, Redis] # TODO: ex. PostgreSQL, MySQL, MongoDB, Redis
+    familiar: [DynamoDB, Cassandra]
+
+  ecommerce:
+    comfortable: [Adobe Commerce, Magento]
+    familiar: [Wake Platform]
+
+  devops_infra:
+    comfortable: [Docker, CI/CD, Azure, RabbitMQ] # TODO: ex. Docker, CI/CD, GitHub Actions
+    familiar: [AWS, GCP, Kubernetes, GitHub Actions, Kafka, Jenkins] # TODO: ex. AWS, GCP, Kubernetes
+
+  testing:
+    comfortable: [Jest, Testing Library, Vitest] # TODO: ex. Jest, Testing Library, Vitest
+    familiar: [Cypress, Playwright]
+
+  tools:
+    daily: [Git, VS Code, Figma, Jira, Postman, Claude, Claude Code, Cursor]
+    comfortable: [Linear]
+
+# ============================================================
+# IDIOMAS
+# ============================================================
+languages:
+  - language: "Português"
+    level: "Nativo"
+    level_en: "Native"
+  - language: "Inglês"
+    level: "Avançado - C1"
+    level_en: "Advanced - C1"
+
+# ============================================================
+# INFORMAÇÕES EXTRAS
+# Campos opcionais que podem ser incluídos em vagas específicas
+# ============================================================
+extras:
+  availability: "2 semanas"
+  work_preference: "Remoto"
+  willing_to_relocate: false

@@ -13,6 +13,21 @@ const eslintConfig = defineConfig([
     "build/**",
     "next-env.d.ts",
   ]),
+  {
+    // Vendored React Bits components (reactbits.dev, MIT + Commons Clause).
+    // Kept close to upstream so they stay easy to re-sync; rewriting them to
+    // satisfy our lint rules would defeat that.
+    files: ["src/components/reactbits/**/*.tsx"],
+    rules: {
+      "@typescript-eslint/no-unused-vars": "off",
+      "@typescript-eslint/no-explicit-any": "off",
+      "react-hooks/exhaustive-deps": "off",
+      "react-hooks/set-state-in-effect": "off",
+      "react-hooks/refs": "off",
+      "react-hooks/purity": "off",
+    },
+    linterOptions: { reportUnusedDisableDirectives: "off" },
+  },
 ]);
 
 export default eslintConfig;

@@ -1,0 +1,78 @@
+'use client';
+
+import type { SpringOptions } from 'motion/react';
+import { useRef } from 'react';
+import { motion, useMotionValue, useReducedMotion, useSpring } from 'motion/react';
+
+/**
+ * React Bits `TiltedCard`, adapted:
+ * - takes `children` instead of an `imageSrc`, so the portrait can be a
+ *   `next/image` (the original renders a raw <img> and skips optimization);
+ * - drops the mobile warning banner and the tooltip figcaption;
+ * - no-ops for users who prefer reduced motion.
+ */
+interface TiltedCardProps {
+  children: React.ReactNode;
+  className?: string;
+  scaleOnHover?: number;
+  rotateAmplitude?: number;
+}
+
+const springValues: SpringOptions = {
+  damping: 30,
+  stiffness: 100,
+  mass: 2
+};
+
+export default function TiltedCard({
+  children,
+  className = '',
+  scaleOnHover = 1.05,
+  rotateAmplitude = 12
+}: TiltedCardProps) {
+  const ref = useRef<HTMLDivElement>(null);
+  const prefersReducedMotion = useReducedMotion();
+
+  const rotateX = useSpring(useMotionValue(0), springValues);
+  const rotateY = useSpring(useMotionValue(0), springValues);
+  const scale = useSpring(1, springValues);
+
+  function handleMouse(e: React.MouseEvent<HTMLDivElement>) {
+    if (!ref.current || prefersReducedMotion) return;
+
+    const rect = ref.current.getBoundingClientRect();
+    const offsetX = e.clientX - rect.left - rect.width / 2;
+    const offsetY = e.clientY - rect.top - rect.height / 2;
+
+    rotateX.set((offsetY / (rect.height / 2)) * -rotateAmplitude);
+    rotateY.set((offsetX / (rect.width / 2)) * rotateAmplitude);
+  }
+
+  function handleMouseEnter() {
+    if (prefersReducedMotion) return;
+    scale.set(scaleOnHover);
+  }
+
+  function handleMouseLeave() {
+    scale.set(1);
+    rotateX.set(0);
+    rotateY.set(0);
+  }
+
+  return (
+    <div
+      ref={ref}
+      className={`relative [perspective:900px] ${className}`}
+      onMouseMove={handleMouse}
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
+    >
+      <motion.div
+        className="relative h-full w-full [transform-style:preserve-3d]"
+        style={{ rotateX, rotateY, scale }}
+      >
+        {children}
+      </motion.div>
+    </div>
+  );
+}
