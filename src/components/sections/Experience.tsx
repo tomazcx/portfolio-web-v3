@@ -10,8 +10,6 @@ import { Reveal } from "@/components/motion/Reveal";
 import { Section, SectionHeading } from "@/components/layout/primitives";
 import SpotlightCard from "@/components/reactbits/SpotlightCard";
 
-// Keyed by experience id rather than company name — both Nestlé roles share
-// one logo, and matching by id avoids fragile string comparisons.
 const companyLogos: Record<string, StaticImageData> = {
   "nestle-nh-labs": nestleLogo,
   "nestle-mathex": nestleLogo,
@@ -35,7 +33,6 @@ export function Experience({
       />
 
       <ol className="relative space-y-6">
-        {/* The rail. Hidden from assistive tech — the <ol> already conveys order. */}
         <span
           aria-hidden="true"
           className="absolute bottom-6 left-[7px] top-6 hidden w-px bg-gradient-to-b from-accent/60 via-border to-transparent sm:block"

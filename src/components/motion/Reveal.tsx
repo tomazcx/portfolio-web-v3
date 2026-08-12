@@ -6,18 +6,10 @@ type RevealProps = {
   children: React.ReactNode;
   className?: string;
   delay?: number;
-  /** Distance travelled on the way in, in px. */
   distance?: number;
   as?: "div" | "li" | "section";
 };
 
-/**
- * Scroll-triggered entrance used across every section.
- *
- * `MotionConfig reducedMotion="user"` already neutralises transforms, but the
- * initial opacity is honoured regardless, so reduced-motion users would see
- * blank space. Bail out to a plain element instead.
- */
 export function Reveal({
   children,
   className,

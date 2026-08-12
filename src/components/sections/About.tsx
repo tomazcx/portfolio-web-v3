@@ -5,8 +5,6 @@ import type { Dictionary } from "@/i18n/get-dictionary";
 import { Reveal } from "@/components/motion/Reveal";
 import { Section, SectionHeading } from "@/components/layout/primitives";
 
-// The UFPR "Tecnólogo" (index 1) is already completed as of the site's
-// current date, so it doubles as the "graduated" fact for this card.
 const graduateFact = {
   en: `Graduate — ${education[1].degree.en}`,
   "pt-br": `Graduado — ${education[1].degree["pt-br"]}`,

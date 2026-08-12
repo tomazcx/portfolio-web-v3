@@ -18,7 +18,6 @@ export const role: Localized = {
   "pt-br": "Desenvolvedor Fullstack Sênior",
 };
 
-/** Adapted from `summary_variants.fullstack` / `fullstack_pt` in profile.yaml. */
 export const summary: Localized = {
   en: "I turn complex enterprise requirements into fast, resilient, production-grade systems, from headless e-commerce architectures to high-traffic NestJS microservices with cloud infrastructure. Actively contributed to the architecture and development of Nestlé's third largest e-commerce in the world, serving as the primary technical reference on projects impacting 1M+ users and driving strategic technical decisions.",
   "pt-br":

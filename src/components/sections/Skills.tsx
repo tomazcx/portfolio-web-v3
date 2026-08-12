@@ -6,10 +6,6 @@ import { Section, SectionHeading } from "@/components/layout/primitives";
 import { SkillsBento } from "./SkillsBento";
 import { techIcons } from "./techIcons";
 
-// AWS's logo is a near-black wordmark (#252F3E) with no lighter variant —
-// the glow alone isn't enough to read it against the dark theme, so it also
-// gets inverted there (the bright orange arrow shifts hue, but the text
-// becomes legible, which matters more).
 const darkInvertIcons = new Set(["AWS"]);
 
 function TechMarquee() {
@@ -28,7 +24,6 @@ function TechMarquee() {
         className="animate-marquee flex w-max items-center gap-10 group-hover:[animation-play-state:paused] motion-reduce:animate-none"
         style={{ "--marquee-duration": "48s" } as React.CSSProperties}
       >
-        {/* Duplicated so the -50% translation loops seamlessly. */}
         {[...marqueeStack, ...marqueeStack].map((tech, index) => {
           const Icon = techIcons[tech];
           return (
@@ -36,10 +31,6 @@ function TechMarquee() {
               key={`${tech}-${index}`}
               className="flex shrink-0 items-center gap-10"
             >
-              {/* The icons are brand-colour SVGs, not currentColor — a couple
-                  (Next.js, PostgreSQL) are solid black and would disappear
-                  against the near-black dark theme with no backing at all,
-                  so a faint theme-aware glow stands in for the old chip. */}
               <span
                 title={tech}
                 className={cn(

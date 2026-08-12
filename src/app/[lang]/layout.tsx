@@ -23,7 +23,6 @@ const geistMono = Geist_Mono({
   display: "swap",
 });
 
-/** Only `en` and `pt-br` exist; any other segment is a 404 rather than a render. */
 export const dynamicParams = false;
 
 export function generateStaticParams() {
@@ -97,9 +96,7 @@ export default async function RootLayout(props: LayoutProps<"/[lang]">) {
   return (
     <html
       lang={htmlLang[lang]}
-      // next-themes rewrites this class before hydration.
       suppressHydrationWarning
-      // Next 16 no longer forces smooth scrolling during navigation.
       data-scroll-behavior="smooth"
       className={`${geistSans.variable} ${geistMono.variable} h-full`}
     >

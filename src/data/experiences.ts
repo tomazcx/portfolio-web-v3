@@ -1,10 +1,5 @@
 import type { Experience } from "./types";
 
-/**
- * Transcribed from `experiences` in profile.yaml.
- * Bullet copy is verbatim (`text` -> en, `text_pt` -> pt-br).
- * The `context:` fields are internal notes and are intentionally not surfaced.
- */
 export const experiences: Experience[] = [
   {
     id: "nestle-nh-labs",

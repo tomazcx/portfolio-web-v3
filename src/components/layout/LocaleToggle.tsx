@@ -17,10 +17,6 @@ const flagByLocale: Record<Locale, React.ComponentType<{ className?: string }>> 
   "pt-br": FlagBR,
 };
 
-/**
- * Real links rather than a JS switch, so each locale is crawlable and
- * middle-click/open-in-new-tab behave as expected.
- */
 export function LocaleToggle({ current }: { current: Locale }) {
   const pathname = usePathname();
 

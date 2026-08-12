@@ -2,14 +2,6 @@
 
 import { useEffect, useState } from "react";
 
-/**
- * True only when it's reasonable to run the expensive stuff (WebGL, canvas,
- * pointer-driven tilt): a fine pointer, a wide viewport, enough cores, and no
- * reduced-motion preference.
- *
- * Starts `false` so the server render and the first client paint agree; it
- * flips on after mount if the device qualifies.
- */
 export function useRichMotion(): boolean {
   const [enabled, setEnabled] = useState(false);
 

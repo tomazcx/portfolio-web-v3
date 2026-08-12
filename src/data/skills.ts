@@ -1,6 +1,5 @@
 import type { Localized, SkillCategory, SkillLevel } from "./types";
 
-/** Transcribed from `skills` in profile.yaml. Empty levels are omitted. */
 export const skillCategories: SkillCategory[] = [
   {
     id: "languages",
@@ -103,12 +102,6 @@ export const skillLevelLabel: Record<SkillLevel, Localized> = {
   familiar: { en: "Familiar", "pt-br": "Familiarizado" },
 };
 
-/**
- * Headline stack shown in the marquee — the tools used most across roles.
- * Every entry here must have a matching icon in `techIcons.ts`; "Adobe
- * Commerce" and "RabbitMQ" were dropped because `developer-icons` has no
- * logo for either.
- */
 export const marqueeStack: string[] = [
   "TypeScript",
   "React",

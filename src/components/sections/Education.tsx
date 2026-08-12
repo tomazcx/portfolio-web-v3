@@ -31,13 +31,6 @@ export function Education({
                   className="p-5 sm:p-6"
                   spotlightColor="rgba(49, 94, 255, 0.12)"
                 >
-                  {/* Breakpoint-driven, not content-driven: with `flex-wrap`
-                      a longer institution name pushed only that card's date
-                      onto its own line, where `justify-between` left-aligned
-                      it while the shorter names kept theirs right-aligned.
-                      Stacking below `sm` and going inline above it keeps all
-                      cards agreeing at every width; `shrink-0` stops the mono
-                      date (which wraps badly) from being squeezed. */}
                   <div className="flex flex-col gap-1 sm:flex-row sm:items-baseline sm:justify-between sm:gap-4">
                     <h3 className="text-base font-semibold tracking-tight">
                       {item.institution}

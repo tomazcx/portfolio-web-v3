@@ -4,13 +4,6 @@ import type { SpringOptions } from 'motion/react';
 import { useRef } from 'react';
 import { motion, useMotionValue, useReducedMotion, useSpring } from 'motion/react';
 
-/**
- * React Bits `TiltedCard`, adapted:
- * - takes `children` instead of an `imageSrc`, so the portrait can be a
- *   `next/image` (the original renders a raw <img> and skips optimization);
- * - drops the mobile warning banner and the tooltip figcaption;
- * - no-ops for users who prefer reduced motion.
- */
 interface TiltedCardProps {
   children: React.ReactNode;
   className?: string;

@@ -1,6 +1,5 @@
 import type { Education } from "./types";
 
-/** Transcribed from `education` in profile.yaml (`degree` -> pt-br, `degree_en` -> en). */
 export const education: Education[] = [
   {
     institution: "UFPR",

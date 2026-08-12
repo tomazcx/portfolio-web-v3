@@ -1,6 +1,3 @@
-/** Small inline flag icons for the locale toggle. No external assets: emoji
- * flags render as bare country-code letters on Windows, so SVG is the only
- * option that looks the same everywhere. */
 
 export function FlagUS({ className }: { className?: string }) {
   const stripeHeight = 14 / 7;

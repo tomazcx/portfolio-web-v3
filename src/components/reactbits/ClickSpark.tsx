@@ -42,9 +42,6 @@ const ClickSpark: React.FC<ClickSparkProps> = ({
 
     let resizeTimeout: ReturnType<typeof setTimeout>;
 
-    // Adapted from React Bits: the canvas is a fixed viewport overlay here,
-    // so it sizes to the viewport rather than to its parent element (which
-    // spans the whole scrollable document).
     const resizeCanvas = () => {
       const { innerWidth: width, innerHeight: height } = window;
       if (canvas.width !== width || canvas.height !== height) {
@@ -153,8 +150,6 @@ const ClickSpark: React.FC<ClickSparkProps> = ({
   };
 
   return (
-    // Adapted from React Bits: `className` is configurable so this can wrap the
-    // whole app without fighting the layout's flex column.
     <div className={className} onClick={handleClick}>
       <canvas
         ref={canvasRef}

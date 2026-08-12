@@ -8,13 +8,8 @@ import { Reveal } from "@/components/motion/Reveal";
 import { useRichMotion } from "@/lib/use-rich-motion";
 import { cn } from "@/lib/cn";
 
-// Mirrors `--accent` (#315eff) in globals.css. MagicBento's effects are
-// driven by GSAP inline styles, so they need raw "r, g, b" channels rather
-// than a CSS var.
 const GLOW_COLOR = "49, 94, 255";
 
-// The three broadest categories by item count get a wider card, so the grid
-// reads as an actual bento layout instead of a uniform tile wall.
 const WIDE_CATEGORY_IDS = new Set(["frontend", "backend", "devops"]);
 
 export function SkillsBento({
@@ -25,8 +20,6 @@ export function SkillsBento({
   locale: Locale;
 }) {
   const gridRef = useRef<HTMLDivElement>(null);
-  // Gates particles/tilt/magnetism/spotlight: off under reduced motion, on
-  // touch devices, on low-core hardware, and on narrow viewports.
   const rich = useRichMotion();
 
   return (

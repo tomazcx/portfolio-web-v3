@@ -42,8 +42,6 @@ export function Contact({ dict }: { dict: Dictionary }) {
       href: `https://wa.me/${profile.phone.replace(/\D/g, "")}`,
       copyValue: profile.phoneDisplay,
       external: true,
-      // Plain ASCII: Geist Mono has no glyph for the telephone symbols and
-      // they render as tofu.
       icon: "wa",
     },
   ];

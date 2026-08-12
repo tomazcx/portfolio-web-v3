@@ -4,10 +4,6 @@ import { defaultLocale, isLocale, localeHref } from "@/i18n/config";
 import { getDictionary } from "@/i18n/get-dictionary";
 import { Container } from "@/components/layout/primitives";
 
-/**
- * `not-found.tsx` gets no `params`, so the locale comes from `next/root-params`
- * (new in Next 16.3) — the segment sits above the root layout.
- */
 export default async function NotFound() {
   const segment = await lang();
   const locale = isLocale(segment ?? "") ? (segment as never) : defaultLocale;

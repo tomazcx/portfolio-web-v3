@@ -30,10 +30,8 @@ export function Providers({ children }: { children: React.ReactNode }) {
       attribute="class"
       defaultTheme="dark"
       enableSystem
-      // Without this every element crossfades on toggle, which reads as jank.
       disableTransitionOnChange
     >
-      {/* `reducedMotion="user"` makes every motion component degrade on its own. */}
       <MotionConfig reducedMotion="user">
         <SparkLayer>{children}</SparkLayer>
       </MotionConfig>

@@ -7,12 +7,6 @@ type Props = { labelLight: string; labelDark: string };
 
 const subscribe = () => () => {};
 
-/**
- * False while rendering on the server and during the hydrating render, true
- * afterwards. `next-themes` reads localStorage synchronously, so the resolved
- * theme is already known on the client's first render and reading it directly
- * would produce a hydration mismatch.
- */
 function useHydrated(): boolean {
   return useSyncExternalStore(
     subscribe,
@@ -24,8 +18,6 @@ function useHydrated(): boolean {
 export function ThemeToggle({ labelLight, labelDark }: Props) {
   const { resolvedTheme, setTheme } = useTheme();
 
-  // Until hydration completes, render a same-size placeholder so the header
-  // doesn't shift and the markup matches what the server sent.
   const mounted = useHydrated();
   const isDark = resolvedTheme === "dark";
 

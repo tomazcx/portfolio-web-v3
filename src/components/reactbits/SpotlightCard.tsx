@@ -55,8 +55,6 @@ const SpotlightCard: React.FC<SpotlightCardProps> = ({
       onBlur={handleBlur}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
-      // Adapted from React Bits: the original hardcodes `border-neutral-800
-      // bg-neutral-900`, which ignores the light theme. Uses design tokens instead.
       className={`relative overflow-hidden rounded-2xl border border-border bg-surface p-6 ${className}`}
     >
       <div

@@ -1,8 +1,3 @@
-/**
- * UI strings. CV content lives in `src/data/` instead.
- * This object's inferred shape is the `Dictionary` contract every other
- * locale must satisfy, so keys can't silently drift apart.
- */
 export const en = {
   meta: {
     title: "Tomaz Cantarelli Xavier — Senior Fullstack Developer",

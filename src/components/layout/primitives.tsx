@@ -66,7 +66,6 @@ export function SectionHeading({
   );
 }
 
-/** Faint engineering grid + amber bloom behind the whole page. CSS only. */
 export function GridBackdrop() {
   return (
     <div

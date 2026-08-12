@@ -17,8 +17,6 @@ export function Hero({ dict, locale }: { dict: Dictionary; locale: Locale }) {
       <HeroBackground />
 
       <Container className="relative pb-16 pt-16 sm:pb-24 sm:pt-24">
-        {/* The portrait track is an explicit width: an `auto` track collapses
-            to zero against the child's `w-full`, taking the image with it. */}
         <div className="grid items-center gap-12 lg:grid-cols-[minmax(0,1fr)_340px] lg:gap-16">
           <div>
             <p className="label-mono mb-4">
@@ -73,8 +71,6 @@ export function Hero({ dict, locale }: { dict: Dictionary; locale: Locale }) {
             </div>
           </div>
 
-          {/* Text first on small screens — a full-bleed portrait above the fold
-              pushes the name and role off it. */}
           <div className="mx-auto w-[min(260px,64vw)] lg:w-[340px]">
             <TiltedCard className="aspect-square w-full">
               <div className="relative size-full overflow-hidden rounded-2xl border border-border bg-surface-2">
@@ -84,7 +80,6 @@ export function Hero({ dict, locale }: { dict: Dictionary; locale: Locale }) {
                   fill
                   sizes="(max-width: 1024px) 280px, 340px"
                   placeholder="blur"
-                  // `priority` is deprecated in Next 16; this is the LCP image.
                   loading="eager"
                   fetchPriority="high"
                   className="object-cover"

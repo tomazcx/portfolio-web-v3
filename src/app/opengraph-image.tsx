@@ -5,10 +5,6 @@ export const alt = `${profile.name} — ${role.en}`;
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
-/**
- * Lives outside `[lang]` so a single card serves both locales and the proxy
- * matcher can exclude it (a rewrite under a locale segment would 404 it).
- */
 export default function OpengraphImage() {
   return new ImageResponse(
     (
@@ -50,8 +46,6 @@ export default function OpengraphImage() {
           >
             {profile.name}
           </div>
-          {/* Single text child, no glyphs outside the default font: Satori
-              downloads fonts per character set and fails the build otherwise. */}
           <div style={{ color: "#f59e0b", fontSize: 38, marginTop: 24 }}>
             {role.en}
           </div>

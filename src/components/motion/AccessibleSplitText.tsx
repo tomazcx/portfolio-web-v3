@@ -10,22 +10,12 @@ type Props = {
   delay?: number;
 };
 
-/**
- * React Bits `SplitText` explodes a string into per-character spans, which
- * screen readers then announce letter by letter. Wrapping it in an element
- * that carries the whole string as `aria-label`, with the animated spans
- * hidden, keeps the animation without wrecking the accessible name.
- */
 export function AccessibleSplitText({
   text,
   className,
   tag = "h1",
   delay = 28,
 }: Props) {
-  // Desktop only. GSAP SplitText wraps each line in an `overflow: hidden`
-  // parent sized from a pre-wrap measurement, which clips the heading to a
-  // single line once it wraps on narrow viewports. Rendering plain text there
-  // is both safer and the right call for reduced-motion and low-power devices.
   const rich = useRichMotion();
 
   if (!rich) {

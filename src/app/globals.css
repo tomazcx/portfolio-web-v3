@@ -1,14 +1,7 @@
 @import "tailwindcss";
 
-/* next-themes writes `class="dark"` on <html>; Tailwind v4 needs the variant declared. */
 @custom-variant dark (&:where(.dark, .dark *));
 
-/* ---------------------------------------------------------------
-   Design tokens
-   Light = warm beige/paper. Dark = deep near-black + amber.
-   Only these two blocks define raw colors; everything else
-   consumes them through the @theme mapping below.
----------------------------------------------------------------- */
 :root {
   --bg: #faf7f2;
   --bg-elevated: #ffffff;
@@ -112,9 +105,6 @@
   }
 }
 
-/* ---------------------------------------------------------------
-   Base
----------------------------------------------------------------- */
 @layer base {
   html {
     color-scheme: light;
@@ -144,7 +134,6 @@
     border-radius: 2px;
   }
 
-  /* Only the fallback here — components read the media query in JS too. */
   @media (prefers-reduced-motion: reduce) {
     *,
     *::before,
@@ -157,11 +146,8 @@
   }
 }
 
-/* ---------------------------------------------------------------
-   Utilities
----------------------------------------------------------------- */
 @layer utilities {
-  /* Faint engineering grid used behind the page. */
+
   .bg-grid {
     background-image:
       linear-gradient(to right, var(--grid-line) 1px, transparent 1px),
@@ -182,9 +168,6 @@
     );
   }
 
-  /* Monospaced eyebrow/label used across section headings.
-     Deliberately sets no colour so callers can pick one with a utility
-     without depending on which utility wins the cascade. */
   .label-mono {
     font-family: var(--font-geist-mono), ui-monospace, monospace;
     font-size: 0.75rem;

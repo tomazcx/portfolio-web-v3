@@ -35,8 +35,6 @@ export function Header({ locale, items, labels }: Props) {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  // Drives aria-current so keyboard and screen-reader users get the same
-  // "where am I" cue the amber underline gives sighted users.
   useEffect(() => {
     const sections = items
       .map((item) => document.getElementById(item.id))
@@ -57,7 +55,6 @@ export function Header({ locale, items, labels }: Props) {
     return () => observer.disconnect();
   }, [items]);
 
-  // Close the sheet on Escape and lock body scroll while it's open.
   useEffect(() => {
     if (!open) return;
     const onKey = (e: KeyboardEvent) => {

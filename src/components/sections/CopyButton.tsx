@@ -6,7 +6,6 @@ type Props = {
   value: string;
   labelCopy: string;
   labelCopied: string;
-  /** Pre-rendered sentence — functions can't cross the server/client boundary. */
   announceCopied: string;
 };
 
@@ -25,7 +24,6 @@ export function CopyButton({
     try {
       await navigator.clipboard.writeText(value);
     } catch {
-      // Clipboard API needs a secure context; fall back to the old trick.
       const field = document.createElement("textarea");
       field.value = value;
       field.setAttribute("readonly", "");

@@ -1,22 +1,5 @@
 'use client';
 
-/**
- * Adapted from React Bits' MagicBento.
- *
- * The upstream component is a self-contained demo: it renders 6 hardcoded
- * cards (fixed title/description/label) in a grid whose responsive column
- * spans are hardcoded via `nth-child` CSS for exactly those 6 cards, with a
- * dark-only, purple-branded palette baked into inline styles.
- *
- * This keeps the interaction engine — the particle trail, cursor-tracked
- * border glow, tilt/magnetism, click ripple, and the whole-section spotlight
- * that fades in as the cursor nears any card — but exposes it as two pieces
- * a caller composes: `MagicCard` (one card, takes arbitrary children instead
- * of title/description/label) and `MagicSpotlight` (the shared cursor glow,
- * mounted once per grid). Grid layout and card theming are left to the
- * caller's own Tailwind classes so both themes and any card count work.
- */
-
 import React, { useCallback, useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 
@@ -71,7 +54,6 @@ export interface MagicCardProps {
   enableMagnetism?: boolean;
 }
 
-/** One bento cell: particle trail, cursor-tracked border glow, optional tilt/magnetism/click ripple. */
 export const MagicCard: React.FC<MagicCardProps> = ({
   children,
   className = '',
@@ -296,9 +278,6 @@ export const MagicCard: React.FC<MagicCardProps> = ({
     };
   }, [animateParticles, clearAllParticles, disableAnimations, enableTilt, enableMagnetism, clickEffect, glowColor]);
 
-  // `card` + `card--border-glow` are the contract `MagicSpotlight` and the
-  // injected stylesheet (`MagicBentoStyles`) key off of — baked in here so
-  // callers can't forget them.
   const markerClasses = `card${enableBorderGlow ? ' card--border-glow' : ''}`;
 
   return (
@@ -316,11 +295,6 @@ export interface MagicSpotlightProps {
   glowColor?: string;
 }
 
-/**
- * The whole-section cursor spotlight: a soft glow that follows the pointer
- * and brightens each `.card`'s border glow based on proximity. Mount once per
- * grid, alongside the grid's own ref.
- */
 export const MagicSpotlight: React.FC<MagicSpotlightProps> = ({
   gridRef,
   disableAnimations = false,
@@ -437,13 +411,6 @@ export const MagicSpotlight: React.FC<MagicSpotlightProps> = ({
   return null;
 };
 
-/**
- * The CSS the cards/spotlight need (border-glow pseudo-element, particle
- * halo). Render once per grid. Trimmed from upstream: dropped the
- * hardcoded 6-card responsive spans and the dark-only demo palette
- * (`--background-dark`/`--white`/`--purple-*`) — grid layout and card
- * backgrounds are the caller's Tailwind classes instead, so both themes work.
- */
 export function MagicBentoStyles({ glowColor = DEFAULT_GLOW_COLOR }: { glowColor?: string }) {
   return (
     <style>{`
