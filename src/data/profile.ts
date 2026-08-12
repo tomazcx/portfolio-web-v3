@@ -14,8 +14,8 @@ export const profile = {
 } as const;
 
 export const role: Localized = {
-  en: "Senior Fullstack Developer",
-  "pt-br": "Desenvolvedor Fullstack Sênior",
+  en: "Senior Software Developer",
+  "pt-br": "Desenvolvedor de Software Sênior",
 };
 
 export const summary: Localized = {

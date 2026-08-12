@@ -34,6 +34,9 @@ export function Education({
                   <div className="flex flex-col gap-1 sm:flex-row sm:items-baseline sm:justify-between sm:gap-4">
                     <h3 className="text-base font-semibold tracking-tight">
                       {item.institution}
+                      <span className="mt-2 block text-sm font-normal text-fg-muted sm:text-base">
+                        {item.degree[locale]}
+                      </span>
                     </h3>
                     <p className="label-mono text-fg-subtle sm:shrink-0">
                       {formatPeriod(
@@ -44,9 +47,6 @@ export function Education({
                       )}
                     </p>
                   </div>
-                  <p className="mt-2 text-sm text-fg-muted sm:text-base">
-                    {item.degree[locale]}
-                  </p>
                 </SpotlightCard>
               </Reveal>
             </li>

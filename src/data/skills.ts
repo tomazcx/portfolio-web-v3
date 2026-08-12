@@ -3,7 +3,7 @@ import type { Localized, SkillCategory, SkillLevel } from "./types";
 export const skillCategories: SkillCategory[] = [
   {
     id: "languages",
-    label: { en: "Languages", "pt-br": "Linguagens" },
+    label: { en: "Programming Languages", "pt-br": "Linguagens" },
     groups: [
       {
         level: "proficient",

@@ -1,6 +1,6 @@
 export const en = {
   meta: {
-    title: "Tomaz Cantarelli Xavier — Senior Fullstack Developer",
+    title: "Tomaz Xavier - Senior Developer",
     description:
       "I turn complex enterprise requirements into fast, resilient, production-grade systems. Technical reference on Nestlé projects impacting 1M+ users.",
   },
@@ -20,6 +20,7 @@ export const en = {
     themeDark: "Switch to dark theme",
     switchLanguage: "Switch language to Portuguese",
     profilePhoto: "Portrait of Tomaz Cantarelli Xavier",
+    companyLogo: (company: string) => `${company} logo`,
   },
   hero: {
     intro: "Hi, I'm",

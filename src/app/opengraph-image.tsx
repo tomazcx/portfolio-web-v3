@@ -1,9 +1,17 @@
 import { ImageResponse } from "next/og";
-import { profile, role } from "@/data/profile";
+import { profile, role, stats } from "@/data/profile";
 
 export const alt = `${profile.name} — ${role.en}`;
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
+
+const ACCENT = "#315eff";
+
+const highlights = [
+  `${stats[0].value}${stats[0].suffix} years`,
+  `${stats[1].value}${stats[1].suffix} users impacted`,
+  "Nestle",
+].join("   /   ");
 
 export default function OpengraphImage() {
   return new ImageResponse(
@@ -26,7 +34,7 @@ export default function OpengraphImage() {
               width: 14,
               height: 14,
               borderRadius: 999,
-              background: "#f59e0b",
+              background: ACCENT,
             }}
           />
           <div style={{ color: "#8a8a96", fontSize: 28, letterSpacing: 4 }}>
@@ -46,13 +54,13 @@ export default function OpengraphImage() {
           >
             {profile.name}
           </div>
-          <div style={{ color: "#f59e0b", fontSize: 38, marginTop: 24 }}>
+          <div style={{ color: ACCENT, fontSize: 38, marginTop: 24 }}>
             {role.en}
           </div>
         </div>
 
         <div style={{ display: "flex", color: "#61616d", fontSize: 24 }}>
-          {"3+ years  /  100k+ users impacted  /  Nestle"}
+          {highlights}
         </div>
       </div>
     ),

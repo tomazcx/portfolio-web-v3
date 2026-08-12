@@ -5,7 +5,7 @@ import "../globals.css";
 import { htmlLang, isLocale, localeHref, locales } from "@/i18n/config";
 import { getDictionary } from "@/i18n/get-dictionary";
 import { siteUrl } from "@/lib/site";
-import { profile } from "@/data/profile";
+import { profile, role } from "@/data/profile";
 import { Providers } from "../providers";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
@@ -22,6 +22,13 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
   display: "swap",
 });
+
+const ogImage = {
+  url: "/opengraph-image",
+  width: 1200,
+  height: 630,
+  alt: `${profile.name} — ${role.en}`,
+};
 
 export const dynamicParams = false;
 
@@ -62,11 +69,13 @@ export async function generateMetadata(
       siteName: profile.name,
       locale: lang === "pt-br" ? "pt_BR" : "en_US",
       alternateLocale: lang === "pt-br" ? "en_US" : "pt_BR",
+      images: [ogImage],
     },
     twitter: {
       card: "summary_large_image",
       title: dict.meta.title,
       description: dict.meta.description,
+      images: [ogImage],
     },
     robots: { index: true, follow: true },
   };

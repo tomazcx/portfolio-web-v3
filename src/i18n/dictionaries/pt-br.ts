@@ -2,7 +2,7 @@ import type { Dictionary } from "./en";
 
 export const ptBR: Dictionary = {
   meta: {
-    title: "Tomaz Cantarelli Xavier — Desenvolvedor Fullstack Sênior",
+    title: "Tomaz Xavier - Desenvolvedor Sênior",
     description:
       "Transformo requisitos complexos de negócio em sistemas rápidos, resilientes e prontos para produção. Referência técnica em projetos da Nestlé com impacto em mais de 1 milhão de usuários.",
   },
@@ -22,6 +22,7 @@ export const ptBR: Dictionary = {
     themeDark: "Mudar para o tema escuro",
     switchLanguage: "Mudar idioma para inglês",
     profilePhoto: "Retrato de Tomaz Cantarelli Xavier",
+    companyLogo: (company: string) => `Logo da ${company}`,
   },
   hero: {
     intro: "Olá, eu sou o",

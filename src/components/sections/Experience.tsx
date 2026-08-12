@@ -63,7 +63,8 @@ export function Experience({
                         <span className="relative size-12 shrink-0 overflow-hidden rounded-xl border border-border sm:size-14">
                           <Image
                             src={companyLogos[experience.id]}
-                            alt=""
+                            alt={dict.a11y.companyLogo(experience.company)}
+                            title={experience.company}
                             fill
                             sizes="56px"
                             className="object-cover"
@@ -73,10 +74,10 @@ export function Experience({
                       <div>
                         <h3 className="text-xl font-semibold tracking-tight sm:text-2xl">
                           {experience.company}
+                          <span className="mt-1 block text-base font-normal tracking-normal text-accent">
+                            {experience.role[locale]}
+                          </span>
                         </h3>
-                        <p className="mt-1 text-base text-accent">
-                          {experience.role[locale]}
-                        </p>
                         {experience.via ? (
                           <p className="mt-1 text-sm text-fg-subtle">
                             {experience.via[locale]}

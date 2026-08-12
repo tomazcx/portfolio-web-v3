@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256" role="img" aria-label="Tomaz Xavier">
+  <rect width="256" height="256" fill="#315eff" />
+  <polygon points="44.00,108.00 136.00,108.00 136.00,136.00 44.00,136.00" fill="#ffffff" />
+  <polygon points="76.00,108.00 104.00,108.00 104.00,224.00 76.00,224.00" fill="#ffffff" />
+  <polygon points="146.00,124.30 207.63,224.00 234.00,207.70 172.37,108.00" fill="#ffffff" />
+  <polygon points="207.63,108.00 146.00,207.70 172.37,224.00 234.00,124.30" fill="#ffffff" />
+</svg>

@@ -35,16 +35,24 @@ export function Hero({ dict, locale }: { dict: Dictionary; locale: Locale }) {
 
             <p className="mb-2 text-lg text-fg-muted">{dict.hero.intro}</p>
 
-            <AccessibleSplitText
-              tag="h1"
-              text={profile.name}
-              className="text-balance-heading text-4xl font-semibold leading-[1.05] tracking-tight sm:text-6xl lg:text-7xl"
-            />
-
-            <p className="mt-5 flex items-center gap-3 text-lg font-medium text-accent sm:text-xl">
-              <span aria-hidden="true">▸</span>
-              {role[locale]}
-            </p>
+            <h1>
+              <AccessibleSplitText
+                tag="span"
+                text={profile.name}
+                className="text-balance-heading block text-4xl font-semibold leading-[1.05] tracking-tight sm:text-6xl lg:text-7xl"
+              />
+              <span className="sr-only"> - </span>
+              <span className="mt-5 flex items-center gap-3 text-lg font-medium text-accent sm:text-xl">
+                <svg
+                  aria-hidden="true"
+                  viewBox="0 0 8 10"
+                  className="h-[0.7em] w-[0.56em] shrink-0 fill-current"
+                >
+                  <polygon points="0,0 8,5 0,10" />
+                </svg>
+                {role[locale]}
+              </span>
+            </h1>
 
             <p className="mt-6 max-w-xl text-base leading-relaxed text-fg-muted sm:text-lg">
               {dict.meta.description}
@@ -77,6 +85,7 @@ export function Hero({ dict, locale }: { dict: Dictionary; locale: Locale }) {
                 <Image
                   src={profilePhoto}
                   alt={dict.a11y.profilePhoto}
+                  title={profile.name}
                   fill
                   sizes="(max-width: 1024px) 280px, 340px"
                   placeholder="blur"
